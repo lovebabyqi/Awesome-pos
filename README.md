@@ -1,3 +1,4 @@
+
 **pos-server是基于node+koa+mongodb的服务**
 
 需要自己新开mongodb数据库,默认27017端口
@@ -24,7 +25,5 @@ yarn install
 ```
 yarn serve
 ```
-
-
 
 
