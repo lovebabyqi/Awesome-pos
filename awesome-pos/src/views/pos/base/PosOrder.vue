@@ -2,6 +2,7 @@
     <div class="pos-order">
         <el-table
                 :data="orderList"
+                class="order-list"
                 style="width: 100%"
                 border
                 empty-text="暂无商品"
@@ -116,6 +117,10 @@
 
 <style scoped lang="less">
     .pos-order{
+        .order-list{
+            min-height:600px;
+            overflow-y: scroll;
+        }
         .add-btn{
             margin:10px;
         }

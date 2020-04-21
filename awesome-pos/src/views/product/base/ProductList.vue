@@ -112,22 +112,24 @@
 
 <style scoped lang="less">
     #product-list {
+        padding-bottom:35px;
         display: flex;
         min-height: 600px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        /*align-self:flex-start;*/
         .el-card {
-            align-self:flex-start;
+
             box-sizing: border-box;
             padding: 5px;
             position: relative;
-            margin-left:4px;
+            margin:4px;
             overflow: hidden;
             /*min-height: 200px;*/
             /*max-height: 420px;*/
             /*height:400px;*/
-            margin-bottom: 10px;
+            /*margin-bottom: 10px;*/
 
             .price {
                 color: red;

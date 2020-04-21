@@ -117,14 +117,12 @@
                 cursor: pointer;
                 .product-name{
                     position:absolute;
-                    bottom:3px;
-                    right:3px;
+
+                    right:20px;
                     width:100px;
                     font-size: 14px;
-                    font-weight: bold;
-                    overflow: hidden;
+                    font-weight: 400;
                     white-space: nowrap;
-                    text-overflow: ellipsis;
                 }
                 .price {
                     color: red;
@@ -132,6 +130,7 @@
                     font-size: 1.3em;
                     position: absolute;
                     right: 25px;
+                    bottom:3px;
                 }
 
                 .image {

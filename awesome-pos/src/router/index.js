@@ -2,8 +2,8 @@
 // import VueRouter from 'vue-router'
 // const Home = ()=>import(/*webpackChunkName:'home'*/'../views/home/Home');
 const Pos = ()=>import(/*webpackChunkName:'pos'*/'../views/pos/Pos');
-const Product = ()=>import(/*webpackChunkName:'product'*/'../views/product/Product');
-const Account = ()=>import(/*webpackChunkName:'account'*/'../views/acount/Account');
+const Product = ()=>import(/*webpackChunkName:'pos'*/'../views/product/Product');
+const Account = ()=>import(/*webpackChunkName:'pos'*/'../views/acount/Account');
 const Echart = ()=>import(/*webpackChunkName:'echart'*/'../views/echart/Echart');
 Vue.use(VueRouter);
 
