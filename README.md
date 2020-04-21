@@ -14,7 +14,7 @@ yarn install
 nodemon app.js
 ```
 
-###awesome-pos基于Vue脚手架
+## awesome-pos基于Vue脚手架
 进入awesome-pos目录
 
 安装依赖
