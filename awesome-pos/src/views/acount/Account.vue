@@ -16,8 +16,8 @@
                 <el-table-column type="index" width="50" :index="sumIndex"></el-table-column>
                 <el-table-column prop="timeDate" label="日期" sortable width="180" :formatter="formatterDate"></el-table-column>
                 <el-table-column prop="orderList" label="商品" width="550" :formatter="formatter"></el-table-column>
-                <el-table-column prop="time" label="结算时间" width="100" :formatter="formatterTime"></el-table-column>
-                <el-table-column prop="priceTotal" label="金额"></el-table-column>
+                <el-table-column prop="time" label="结算时间" width="90" :formatter="formatterTime"></el-table-column>
+                <el-table-column prop="priceTotal" label="结算金额"></el-table-column>
             </el-table>
         <el-pagination
                 layout="prev, pager, next"
@@ -60,11 +60,11 @@
                     this.todayDate = (new Date()).toLocaleDateString()
                     this.todayTotal = (data.filter(item=>item.timeDate===this.todayDate)).reduce((pre,next)=>pre + (+next.priceTotal),0)
                     this.sumTotal = this.allAccount.reduce((pre,next)=>pre + (+next.priceTotal),0)  //本月累计成交
-                    this.toggleToday()
-                    Message({
-                        message: msg,
-                        type: 'success'
-                    })
+                    this.toggleToday();
+                    // Message({
+                    //     message: msg,
+                    //     type: 'success'
+                    // })
                 } else {
                     Message({
                         message: msg,
@@ -77,13 +77,13 @@
             },
             formatter(row, column) {    //格式化商品数据
                 return row.orderList.reduce((pre, next) => {
-                    return pre + next.productName + 'x' + next.productCount + '单价:' + next.productPrice + '元、'
+                    return pre + next.productName + 'x' + next.productCount + '单价:' + next.productPrice + '元、';
                 },'')
             },
             formatterTime(row,column){  //格式化时间
                 if(row.time){
                     let _date = new Date(JSON.parse(row.time))
-                    return _date.toLocaleString()
+                    return _date.toLocaleString('chinese',{hour12:false})
                 }else{
                     return '未记录时间'
                 }

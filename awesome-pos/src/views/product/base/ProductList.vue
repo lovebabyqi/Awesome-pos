@@ -2,7 +2,7 @@
     <div id="product-list" class="select-disabled">
         <el-card v-for="item in showList" :key="item._id" :style="styleObj" class="select-disabled">
             <img v-lazy="item.imgUrl" class="image">
-            <div style="padding: 14px;">
+            <div>
                 <span>{{item.product_name}}</span>
                 <span class="price">¥{{item.price}}</span>
                 <div class="bottom clearfix">
@@ -44,7 +44,7 @@
         filters: {
             stringTime(time) {
                 let date = new Date(JSON.parse(time))
-                return date.toLocaleString()
+                return date.toLocaleString('chinese',{hour12:false})
             }
         },
         watch: {
@@ -122,7 +122,7 @@
         .el-card {
 
             box-sizing: border-box;
-            padding: 5px;
+            padding: 5px 5px 18px;
             position: relative;
             margin:4px;
             overflow: hidden;

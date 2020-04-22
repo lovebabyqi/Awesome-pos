@@ -74,7 +74,7 @@
                     {type: '显示所有', value: '5'}, {type: '汉堡', value: '0'}, {type: '小食', value: '1'},
                     {type: '饮品', value: '2'}, {type: '套餐', value: '3'}
                 ],
-                widthSize: {width: '250px', fontSize: '0.8em'},
+                widthSize: {width: '180px', fontSize: '0.8em'},
             }
         },
         methods: {

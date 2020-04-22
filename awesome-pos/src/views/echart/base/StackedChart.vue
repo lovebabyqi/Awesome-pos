@@ -31,11 +31,11 @@
                 const result = await reqGetAllOrderList()
                 const {status, msg, data} = result
                 if (status === 0) {
-                    this.initChart(data)
-                    Message({
-                        message: msg,
-                        type: 'success'
-                    })
+                    this.initChart(data);
+                    // Message({
+                    //     message: msg,
+                    //     type: 'success'
+                    // })
                 } else {
                     Message({
                         message: msg,

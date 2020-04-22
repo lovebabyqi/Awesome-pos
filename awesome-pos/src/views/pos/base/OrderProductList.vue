@@ -62,7 +62,7 @@
         filters: {
             stringTime(time) {
                 let date = new Date(JSON.parse(time))
-                return date.toLocaleString()
+                return date.toLocaleString('chinese',{hour12:false})
             }
         },
         methods: {

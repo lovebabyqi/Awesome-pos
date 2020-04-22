@@ -2,7 +2,7 @@
     <div class="pos-record">
         <h3 class="record-title" v-if="recordList.length===0">今日暂未出单</h3>
         <h3 class="record-title" v-else>今日出单</h3>
-        <el-button type="danger" class="record-btn" @click="clearRecoed">清除今日出单</el-button>
+        <el-button type="danger" class="record-btn" @click="clearRecord">清除今日出单</el-button>
         <el-card class="box-card" v-for="(item,index) in recordList" :key="item.index">
             <h3 class="title">{{item.time|stringTime}}</h3>
             <div class="text item" v-for="(cItem,cIndex) in item.orderList" :key="cIndex">
@@ -39,11 +39,11 @@
         filters: {
             stringTime(time) {
                 let date = new Date(JSON.parse(time))
-                return date.toLocaleString()
+                return date.toLocaleString('chinese',{hour12:false})
             }
         },
         methods: {
-            clearRecoed() {
+            clearRecord() {
                 if (this.isAfterWork()) {
                     localStorage.removeItem('posRecord')
                     this.recordList = []

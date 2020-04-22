@@ -65,10 +65,10 @@
                 const {status, msg, data} = result
                 if (status === 0) {
                     this.$store.commit('initState',data)
-                    Message({
-                        message: msg,
-                        type: 'success'
-                    })
+                    // Message({
+                    //     message: msg,
+                    //     type: 'success'
+                    // })
                 } else {
                     Message({
                         message: msg,
